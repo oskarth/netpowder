@@ -2,5 +2,5 @@
 
 echo "[Starting satellite...]"
 cd /root/
-/root/websocketd -port 8080 /root/handler.rkt & 
+./websocketd -port 8080 ./handler.rkt & 
 echo "[Running.]"
