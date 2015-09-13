@@ -5,7 +5,7 @@ online, without ever having to bother with a server.
 
 Netpowder is made up of *satellites*. As an end user, you have access to a
 single satellite, such as Triton. This means that you can access
-`triton.netpowder.com` and host public content from that domain.
+`triton.neptune.netpowder.com` and host public content from that domain.
 
 If you wish to see a quick video demonstration, you can do so
 [here](https://www.youtube.com/watch?v=9NqEpsFeKDg).

@@ -34,7 +34,7 @@ function log(msg) {
   document.getElementById('log').textContent = msg + "\n" + currContent;
 }
 
-var ws = new WebSocket('ws://placeholder.netpowder.com:8080/');
+var ws = new WebSocket('ws://placeholder.neptune.netpowder.com:8080/');
 ws.onopen = function() {
   log('CONNECTED');
 };
