@@ -30,11 +30,11 @@ bug report.
 
 ## Getting started
 
-So you just access to a satellite, what do you do now? Before starting to use
-it, please keep the following things in mind:
+So you just got access to a satellite, what do you do now? Before starting to
+use it, please keep the following things in mind:
 
-1. **Ask for help and give feedback**. You can open issues on Github, or
-email/tweet/IRC me. If there's anything you are wondering about, or
+1. **Feel free to ask for help and to give feedback**. You can open issues on
+Github, or email/tweet/IRC me. If there's anything you are wondering about, or
 anything you would like to see in in Netpowder, please do let me know.
 
 2. **Be nice**. Don't use your satellite to host anything illegal, or otherwise
@@ -49,8 +49,8 @@ initially. This means that if you don't actively use your satellite within a
 rolling 72 hour window, you will lose the satellite and it will become available
 to the next person in the queue.
 
-More example usages are coming, but in the meantime go crazy and ask questions
-:)
+More example usages are coming, but in the meantime experiment away and don't
+hesitate to ask questions :)
 
 ## Example: Hello World
 
