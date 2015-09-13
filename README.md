@@ -11,39 +11,42 @@ satellite, such as Triton. This means that you can access
 If you wish to see a quick video demonstration, you can do so
 [here](https://www.youtube.com/watch?v=9NqEpsFeKDg).
 
+The rest of this document contains instructions for people with access codes,
+example usages, and answers to commonly asked questions.
+
 ## Getting started
 
 So you just got access to a satellite, what do you do now? Before starting to
 use it, please keep the following things in mind:
 
 1. **Feel free to ask for help and to give feedback**. You can open issues on
-Github, or email/tweet/IRC me. If there's anything you are wondering about, or
-anything you would like to see in in Netpowder, please do let me know.
+Github or email `me@oskarth.com`. If there's anything you are wondering about,
+or anything you would like to see in in Netpowder, let me know.
 
 2. **Be nice**. Don't use your satellite to host anything illegal, or otherwise
 abuse it, such as hosting huge files or flooding the network.
 
 3. **Remember that Netpowder is very new**. Don't use Netpowder for
 security-sensitive applications, or to host things that you don't have a backup
-of. Things will definitely break.
+of. Things will probably break.
 
-Because of current resource constraints, there are only 14 satellites available
-initially. This means that if you don't actively use your satellite within a
-rolling 72 hour window, you might lose access to the satellite and it will
-become available to the next person in the queue.
+Right now there are a limited amount of satellites available. This means that if
+you don't actively use yours (within a rolling 72 hour window), you might lose
+access to it to the next person in queue.
 
-With that said, how do you use it? Go to that satellite's URL and login using
+With that said, how do you use it? Go to your satellite's URL and login using
 your *access code*. You login by typing your *access code* in the *command
 window* below the *editor*. If you see the message "AUTHENTICATED" in the *log*,
 it means you successfully authenticated.
 
 If you see the message "UNAUTHENTICATED" followed by the message "DISCONNECTED"
-it means you entered the wrong code. Please refresh the code and try again. If
-you see anything else, such as just the message "DISCONNECTED", please submit a
-bug report.
+it means you entered the wrong code. Refresh the browser window and try again.
+If you see anything else, such as just the message "DISCONNECTED", please let me
+know.
 
-See the section below for some basic example.  More example usages are coming
-soon, but in the meantime experiment away and don't hesitate to ask questions :)
+There are some examples in the rest of this document, and more examples are
+coming soon. In the meantime, experiment away and don't hesitate to ask
+questions or come with suggestions on what you would like to see in Netpowder.
 
 # Example: Hello World
 
@@ -85,10 +88,10 @@ shell service nginx reload // this reloads the changes you made
 
 ## Commands
 
-Here's an incomplete list of commands. The goal is to mimick the IRC protocol in
-terms of simplicty, while still allowing for more complex shell commands. There
-are thus two types of commands: simple macros, and Unix commands that start with
-`shell`.
+Here's an incomplete list of commands. The goal of the commands is to mimick the
+IRC protocol in terms of its simplicty, while still allowing for more complex
+shell commands. There are thus two types of commands: simple macros, and Unix
+commands that start with `shell`.
 
 If you want to see the implementation of the open/save/serve commands, have a
 look in `server/handler.rkt`.
