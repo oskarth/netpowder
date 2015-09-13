@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/codemirror.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row" style="margin-top:2%">
+      <h4>placeholder.netpowder.com</h4>
+    </div>
+    <div class="row">
+      <div class="two-thirds column">
+        <textarea id="codemirror"> </textarea>
+        <pre id="currentFile" style="font-size:0.9em; margin-top:1%; margin-bottom:1%">Not editing any file.</pre>
+        <input id="input" autofocus="true" class="u-full-width" style="font-size:1em"
+          onkeypress="return input(event,this)"></input>
+      </div>
+      <div class="one-third column">
+        <pre style="font-size:0.9em"><code id="log"></code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- XXX: textarea needs to be loaded first -->
+  <script src="js/codemirror.js"></script>
+  <script src="js/netpowder.js"></script>
+
+</body>
+</html>
