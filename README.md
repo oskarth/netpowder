@@ -3,17 +3,11 @@
 Netpowder is a mini-server in the browser. It allows you to host things you make
 online, without ever having to bother with a server.
 
-Netpowder is made up *satellites*. As an end user, you have access to a single
-satellite, such as Triton. This means that you can access `triton.netpowder.com`
-and host public content from that domain.
+Netpowder is made up of *satellites*. As an end user, you have access to a
+single satellite, such as Triton. This means that you can access
+`triton.netpowder.com` and host public content from that domain.
 
-**CAVEAT**: Don't use Netpowder for security-sensitive applications, or data
-that you don't have access to. There are a lot of things to be done before we
-can guarantee that data is being preserved between deployments, as well as
-making sure your connection is secured. See the security section of the TODO for
-more.
-
-If you wish to see a quick demonstration, you can do so
+If you wish to see a quick video demonstration, you can do so
 [here](https://www.youtube.com/watch?v=9NqEpsFeKDg).
 
 ## Getting access
@@ -31,6 +25,30 @@ you see the message "UNAUTHENTICATED" followed by the message "DISCONNECTED" it
 means you entered the wrong code. Please refresh the code and try again. If you
 see anything else, such as just the message "DISCONNECTED", please submit a bug
 report.
+
+## Getting started
+
+So you just access to a satellite, what do you do now? Before starting to use
+it, please keep the following things in mean:
+
+1. **Ask for help and give feedback**. You can open issues on Github, or
+email/tweet/IRC me. If there's anything you are wondering about, or
+anything you would like to see in in Netpowder, please do let me know.
+
+2. **Be nice**. Don't use your satellite to host anything illegal, or otherwise
+abuse it, such as hosting huge files or flooding the network.
+
+3. **Remeber Netpowder is very new**. Don't use Netpowder for security-sensitive
+applications, or to host things that you don't have a backup of. Things will
+definitely break.
+
+Because of current resource constraints, there are only 14 satellites available
+initially. This means that if you don't actively use your satellite within a
+rolling 72 hour window, you will lose the satellite and it will become available
+to the next person in the queue.
+
+More in-depth tutorials are coming, but in the meantime go crazy and ask
+questions :)
 
 ## Hello World tutorial
 
@@ -75,7 +93,7 @@ know what you are doing, you can always drop down to the shell.
 ### Where does the name Netpowder come from?
 
 I like to imagine it as gunpowder for the web. Hosting things you make should be
-a convenient commodity, not a shore.
+a convenient commodity, not a chore.
 
 ### How does it work?
 
