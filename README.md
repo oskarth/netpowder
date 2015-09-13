@@ -11,23 +11,6 @@ satellite, such as Triton. This means that you can access
 If you wish to see a quick video demonstration, you can do so
 [here](https://www.youtube.com/watch?v=9NqEpsFeKDg).
 
-## Getting access
-
-Currently the number of publicly available satellites is limited. This is due to
-limited resources, as well as the project being in the initial stages in terms
-of satellite deployment. If you wish to try out Netpowder, please email
-`me@oskarth.com`.
-
-Once you have access to a satellite, go that satellite's URL and login using the
-*access code* you have been given. You login by typing your *access code* in the
-*command window* below the *editor*. If you see the message "AUTHENTICATED" in
-the *log*, it means you successfully authenticated.
-
-If you see the message "UNAUTHENTICATED" followed by the message "DISCONNECTED"
-it means you entered the wrong code. Please refresh the code and try again. If
-you see anything else, such as just the message "DISCONNECTED", please submit a
-bug report.
-
 ## Getting started
 
 So you just got access to a satellite, what do you do now? Before starting to
@@ -46,13 +29,23 @@ of. Things will definitely break.
 
 Because of current resource constraints, there are only 14 satellites available
 initially. This means that if you don't actively use your satellite within a
-rolling 72 hour window, you will lose the satellite and it will become available
-to the next person in the queue.
+rolling 72 hour window, you might lose access to the satellite and it will
+become available to the next person in the queue.
 
-More example usages are coming, but in the meantime experiment away and don't
-hesitate to ask questions :)
+With that said, how do you use it? Go to that satellite's URL and login using
+your *access code*. You login by typing your *access code* in the *command
+window* below the *editor*. If you see the message "AUTHENTICATED" in the *log*,
+it means you successfully authenticated.
 
-## Example: Hello World
+If you see the message "UNAUTHENTICATED" followed by the message "DISCONNECTED"
+it means you entered the wrong code. Please refresh the code and try again. If
+you see anything else, such as just the message "DISCONNECTED", please submit a
+bug report.
+
+See the section below for some basic example.  More example usages are coming
+soon, but in the meantime experiment away and don't hesitate to ask questions :)
+
+# Example: Hello World
 
 In the command window, write `open hello`. This lets you edit the file `hello`
 in the editor. Write "Hello World" in the editor, then go back to the command
@@ -135,3 +128,10 @@ a convenient commodity, not a chore.
 ### How does it work behind the scenes?
 
 See http://experiments.oskarth.com/netpowder/ for a technical overview.
+
+### How do I get access?
+
+Currently the number of publicly available satellites is limited. This is due to
+limited resources, as well as the project being in the initial stages in terms
+of satellite deployment. If you wish to try out Netpowder, please email
+`me@oskarth.com` or sign up to the [mailing list](http://netpowder.com/).
