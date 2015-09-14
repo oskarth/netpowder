@@ -66,6 +66,7 @@
   (string-join (list "echo ran" (string-join args) "\n")))
 
 (define (ping? cmd) (equal? (car cmd) "ping"))
+(define (help? cmd) (equal? (car cmd) "help"))
 (define (open? cmd) (equal? (car cmd) "open"))
 (define (serve? cmd) (equal? (car cmd) "serve"))
 (define (beginop? cmd) (equal? (car cmd) "beginop"))
@@ -77,6 +78,7 @@
 
 (define (handle-command cmd)
   (cond [(= (length cmd) 0) "unknown\n"]
+        [(help? cmd) (open '("README.md"))]
         [(ping? cmd) "pong\n"]
         [(= (length cmd) 1) "unknown\n"]
         [(open? cmd)  (open (cdr cmd))]
@@ -101,11 +103,16 @@
 
 ; Super Poor man's auth
 ;(if (equal? (read-line) (getenv "TICKET"))
-(if (equal? (read-line) ticket)
-  (begin
-    (display "AUTHENTICATED\n")
-    (flush-output)
-    (input-loop))
-  (begin
-    (display "UNAUTHENTICATED\n")
-    (flush-output)))
+(define (auth-loop)
+  (if (equal? (read-line) ticket)
+    (begin
+      (display "\nType 'help' to get help.\n")
+      (display "Authenticated.\n")
+      (flush-output)
+      (input-loop))
+    (begin
+      (display "\nBad login. Please try again.\n")
+      (flush-output)
+      (auth-loop))))
+
+(auth-loop)

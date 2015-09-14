@@ -36,7 +36,9 @@ function log(msg) {
 
 var ws = new WebSocket('ws://placeholder.neptune.netpowder.com:8080/');
 ws.onopen = function() {
-  log('CONNECTED');
+  log('bottom of the screen to login.');
+  log('Enter your access code at the');
+  log('Welcome to Netpowder!');
 };
 ws.onclose = function() {
   log('DISCONNECTED');
