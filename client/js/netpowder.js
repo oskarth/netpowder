@@ -42,11 +42,10 @@ ws.onclose = function() {
   log('DISCONNECTED');
 };
 ws.onmessage = function(event) {
-  // XXX: Ugly code with mutable variables
-  splitted = event.data.split(' ');
-  cmd = splitted.shift();
-  splitted.pop();
-  data = splitted.join(' ');
+  msg = event.data.split(' ');
+  cmd = msg[0];
+  msg.splice(0,1); // remove command part of message
+  data = msg.join(' ');
 
   switch (cmd) {
     case "echo":
