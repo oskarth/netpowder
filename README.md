@@ -132,6 +132,13 @@ a convenient commodity, not a chore.
 
 See http://experiments.oskarth.com/netpowder/ for a technical overview.
 
+### Where's the rest of the code?
+
+This repository only shows the satellite part of the code. The backend code that
+generates a planet and its satellites is hosted in a private repo for now. Parts
+of it might be open sourced later, but if you are interested in the setup feel
+free to ping me!
+
 ### How do I get access?
 
 Currently the number of publicly available satellites is limited. This is due to
@@ -140,6 +147,9 @@ of satellite deployment. If you wish to try out Netpowder, please email
 `me@oskarth.com` or sign up to the [mailing list](http://netpowder.com/).
 
 ## TODOs and bugs
+
+Generally, the focus right now is on making the interface and user experience
+better.
 
 - BUG: Writing `open foo/bar` without foo being a directory fails silently.
 
