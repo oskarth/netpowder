@@ -4,6 +4,31 @@ var editor = CodeMirror.fromTextArea(document.getElementById("codemirror"), {
   matchBrackets: true
 });
 
+// toggles between iframe and log view
+function toggle() {
+  iframe_elem = document.getElementById('iframe-wrap');
+  log_elem = document.getElementById('log-wrap');
+
+  if (iframe_elem.style.display == 'none') {
+    log_elem.style.display = 'none';
+    iframe_elem.style.display = 'block';
+  }
+  else {
+    iframe_elem.style.display = 'none';
+    log_elem.style.display = 'block';
+  }
+}
+
+// changes iframe link and brings iframe to the front
+function preview(data) {
+  iframe = document.getElementById('preview');
+  if (data == "") {
+   iframe.src = iframe.src;
+  } else { iframe.src = "http://placeholder.neptune.netpowder.com/" + data;
+  }
+  iframe.contentWindow.location.reload(true);
+}
+
 function input(event, input) {
   if (event.keyCode == 13) {  
     text = document.getElementById('input').value;  
@@ -22,6 +47,13 @@ function input(event, input) {
           ws.send(lines[i]);
         }
         ws.send(["endop", "save", data].join(' '));
+        // when will this be executed?
+        break;
+      case "preview":
+        preview(data);
+        break;
+      case "toggle":
+        toggle();
         break;
       default:  
         ws.send(text);
@@ -34,15 +66,20 @@ function log(msg) {
   document.getElementById('log').textContent = msg + "\n" + currContent;
 }
 
+// TODO: preview foo should put that in iframe
+
 var ws = new WebSocket('ws://placeholder.neptune.netpowder.com:8080/');
+
 ws.onopen = function() {
-  log('bottom of the screen to login.');
-  log('Enter your access code at the');
+  log('Enter your access code at the bottom of the screen to login.');
   log('Welcome to Netpowder!');
 };
+
 ws.onclose = function() {
   log('DISCONNECTED');
 };
+
+// on message from the server
 ws.onmessage = function(event) {
   msg = event.data.split(' ');
   cmd = msg[0];

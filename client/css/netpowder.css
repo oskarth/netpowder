@@ -1,0 +1,29 @@
+/* override skeleton.css */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* override codemirror.css */
+.CodeMirror pre {
+  font-size: 1.1em;
+}
+
+/* flexbox layout from https://philipwalton.github.io/solved-by-flexbox/ */
+.Grid {
+  display: flex;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}

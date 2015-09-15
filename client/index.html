@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>placeholder</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,30 +11,49 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/codemirror.css">
+  <link rel="stylesheet" href="css/netpowder.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
-
 </head>
-<body>
 
-
-  <div class="container">
-    <div class="row" style="margin-top:2%">
-      <h4>placeholder.neptune.netpowder.com</h4>
+<body class="Site">
+  <header style="background-color:#eee;">
+    <div class="Grid">
+      <div class="Grid-cell" style="margin-left:1%;">
+        <h4>placeholder.neptune.netpowder.com</h4>
+      </div>
+      <div class="Grid-cell" onclick="toggle()" style="margin-right:1%; text-align: right;">
+        <h4>preview/log</h4>
+      </div>
     </div>
-    <div class="row">
-      <div class="two-thirds column">
+  </header>
+
+  <main class="Site-content">
+    <div class="Grid">
+
+      <div class="Grid-cell" style="">
         <textarea id="codemirror"> </textarea>
-        <pre id="currentFile" style="font-size:0.9em; margin-top:1%; margin-bottom:1%">Not editing any file.</pre>
-        <input id="input" autofocus="true" class="u-full-width" style="font-size:1em"
-          onkeypress="return input(event,this)"></input>
-      </div>
-      <div class="one-third column">
-        <pre style="font-size:0.9em"><code id="log"></code></pre>
-      </div>
-    </div>
-  </div>
+        <pre id="currentFile" style="margin-left:1%;">Not editing any file.</pre>
+       </div>
 
-  <!-- XXX: textarea needs to be loaded first -->
+      <div class="Grid-cell" style="min-height:500px;">
+        <div id="log-wrap" style="display:block;">
+          <pre style="margin-top:2%;"><code id="log"></code></pre>
+        </div>
+        <div id="iframe-wrap" style="display:none;">
+        <iframe id="preview" style="position: absolute; min-height:500px;
+        min-width:50%; border: none"
+        src="http://polyphemus.neptune.netpowder.com/foo.html"></iframe></div> </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div id="input-wrap">
+    <input id="input" autofocus="true" style="font-size:1.5em; min-width:100%;" onkeypress="return input(event,this)">
+    </input>
+    </div>
+  </footer>
+
   <script src="js/codemirror.js"></script>
   <script src="js/netpowder.js"></script>
 
