@@ -1,0 +1,21 @@
+
+- BUG: Writing `open foo/bar` without foo being a directory fails silently.
+
+- TODO: `open` should automatically do `shell mkdir -p` first.
+
+- BUG: If you save a file `foo` and then create a directory `foo` it fails
+  silently. Super hacky workaround: run `shell rm -r foo` to remove
+  file/directory foo. Be careful not to remove anything else.
+
+- BUG: Sometimes spaces are appended to a file.
+  Might be related to splice "bug fix".
+
+- TODO: Preview foo should put that in the iframe
+
+- XXX: Remove switch statement, replace with something like
+  http://ericleads.com/2012/12/switch-case-considered-harmful/
+
+- BUG: log overflows. Keep capacity.
+
+- TODO: When we get return from save, it should preview (if it makes sense).
+  This requires a better protocol in terms of state, I believe.

@@ -12,7 +12,7 @@ If you wish to see a quick video demonstration, you can do so
 [here](https://www.youtube.com/watch?v=9NqEpsFeKDg).
 
 The rest of this document contains instructions for people with access codes,
-example usages, answers to commonly asked questions, and TODOs and known bugs.
+example usages, and answers to commonly asked questions.
 
 ## Getting started
 
@@ -145,16 +145,3 @@ Currently the number of publicly available satellites is limited. This is due to
 limited resources, as well as the project being in the initial stages in terms
 of satellite deployment. If you wish to try out Netpowder, please email
 `me@oskarth.com` or sign up to the [mailing list](http://netpowder.com/).
-
-## TODOs and bugs
-
-Generally, the focus right now is on making the interface and user experience
-better.
-
-- BUG: Writing `open foo/bar` without foo being a directory fails silently.
-
-- TODO: `open` should automatically do `shell mkdir -p` first.
-
-- BUG: If you save a file `foo` and then create a directory `foo` it fails
-  silently. Super hacky workaround: run `shell rm -r foo` to remove
-  file/directory foo. Be careful not to remove anything else.
