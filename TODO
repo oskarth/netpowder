@@ -1,4 +1,3 @@
-
 - BUG: Writing `open foo/bar` without foo being a directory fails silently.
 
 - TODO: `open` should automatically do `shell mkdir -p` first.
@@ -7,18 +6,22 @@
   silently. Super hacky workaround: run `shell rm -r foo` to remove
   file/directory foo. Be careful not to remove anything else.
 
-- BUG: Sometimes spaces are appended to a file.
-  Might be related to splice "bug fix".
-
-- TODO: Preview foo should put that in the iframe
-
-- XXX: Remove switch statement, replace with something like
-  http://ericleads.com/2012/12/switch-case-considered-harmful/
-
-- BUG: log overflows. Keep capacity.
+- FIXME: Remove switch statement, replace with something like
+  http://ericleads.com/2012/12/switch-case-considered-harmful/ (this will bite
+  you sooner or later)
 
 - TODO: When we get return from save, it should preview (if it makes sense).
   This requires a better protocol in terms of state, I believe.
 
 - BUG / KNOWN ISSUE: When input stops just short of a newline, for example with
   pkg install commands, the last message isn't printed
+
+- TODO: Fix pong message to heartbeat with no reply, too spammy atm
+
+- TODO: Debug ws network perf with wireshark, noticed readme slow. Good post
+  too.  http://stackoverflow.com/questions/3925118/how-to-debug-websockets
+
+- TODO: netpowder-update script to update client based on this repo
+
+- FIXME: var in declarations, better elem naming?
+- TODO: Show preview info (file / link)

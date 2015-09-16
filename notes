@@ -1,0 +1,10 @@
+What is the one task Netpowder can excel at and provide an actual quantum of
+utility?
+
+It's both a client and a server. What are Heroku and Codepen/JSFiddle missing?
+
+Some metrics that might be useful:
+- How few steps/commands must you type to accomplish task X?
+- How robust is it? (how much does it fail?)
+
+No or very little implicit scope.
