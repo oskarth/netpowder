@@ -19,3 +19,6 @@
 
 - TODO: When we get return from save, it should preview (if it makes sense).
   This requires a better protocol in terms of state, I believe.
+
+- BUG / KNOWN ISSUE: When input stops just short of a newline, for example with
+  pkg install commands, the last message isn't printed
