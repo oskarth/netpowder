@@ -63,7 +63,12 @@ function input(event, input) {
 
 function log(msg) {
   currContent = document.getElementById('log').textContent;
-  document.getElementById('log').textContent = msg + "\n" + currContent;
+  //document.getElementById('log').textContent = msg + "\n" + currContent;
+  document.getElementById('log').textContent = currContent + msg + "\n";
+
+  var logel = document.getElementById("log");
+  logel.scrollTop = logel.scrollHeight;
+
 }
 
 // TODO: preview foo should put that in iframe
@@ -71,8 +76,8 @@ function log(msg) {
 var ws = new WebSocket('ws://placeholder.neptune.netpowder.com:8080/');
 
 ws.onopen = function() {
-  log('Enter your access code at the bottom of the screen to login.');
   log('Welcome to Netpowder!');
+  log('Enter your access code at the bottom of the screen to login.');
 };
 
 ws.onclose = function() {
