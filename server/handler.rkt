@@ -14,11 +14,11 @@
 (define (system-cat arg)
   (string-split
     (with-output-to-string
-      (lambda () (system (string-join (list "cat" arg)))))
+      (lambda () (system (string-append "cat " arg))))
     "\n"))
 
 (define (system-touch arg)
-  (system (string-join (list "touch" arg))))
+  (system (string-append "touch " arg)))
 
 (define (build-location-string dir)
   (string-append "\"        location /" dir " {}\""))
@@ -44,9 +44,9 @@
 (define (open args)
   (system-touch (first args))
   (display "clear\n")
-  (map (lambda (s) (display (string-join (list "append" s "\n"))))
+  (map (lambda (s) (display (string-append "append " s "\n")))
        (system-cat (first args)))
-  (string-join (list "edit" (first args) "\n")))
+  (string-append "edit " (first args) "\n"))
 
 ; XXX: Assumes we are saving a file.
 (define (beginop args)
@@ -59,11 +59,11 @@
       (begin-inner)))
   (begin-inner)
   (close-output-port out) ; only here that is it saved/flushed
-  (string-join (list "echo saved file" (cadr args) "\n")))
+  (string-append "echo saved file " (cadr args) "\n"))
   
 (define (shell args)
   (system (string-append (string-join args)))
-  (string-join (list "echo ran" (string-join args) "\n")))
+  (string-append "echo ran " (string-join args) "\n"))
 
 (define (ping? cmd) (equal? (car cmd) "ping"))
 (define (help? cmd) (equal? (car cmd) "help"))
