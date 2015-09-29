@@ -106,8 +106,8 @@
 (define (auth-loop)
   (if (equal? (read-line) ticket)
     (begin
-      (display "\nType 'help' to get help.\n")
-      (display "Authenticated.\n")
+      (display "\nAuthenticated.\n")
+      (display "Type 'help' to get help.\n")
       (flush-output)
       (input-loop))
     (begin
