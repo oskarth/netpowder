@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
+  <script src="js/main.js"></script>
 
 </head>
 <body>
@@ -20,23 +22,10 @@
     <div class="row">
       <div class="one-half column" style="margin-top: 25%">
         <h4>Netpowder</h4>
-        <p> Do you like making side projects but hate dealing with servers? Get
-notified when we launch our public beta.</p>
-        <form action="http://oskarth.us10.list-manage.com/subscribe/post?u=eb9509b0e9820f2fc234227d6&amp;id=d6f74b3099"
-method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-class="validate" target="_blank" novalidate>
-          <div class="mc-field-group">
-            <label for="mce-EMAIL">Email Address </label>
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            <!-- <a class="button button-primary" href="http://getskeleton.com">Try Skeleton</a> -->
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-          </div>
-        <a href="https://github.com/oskarth/netpowder#getting-started">I have a code</a>
-        </form>
+        <p> Do you like making online apps but hate dealing with servers?</p>
+          <a class="button button-primary" onclick=auth()>
+              Try Netpowder
+          </a>
       </div>
 
     </div>
